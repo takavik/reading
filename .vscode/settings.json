@@ -1,0 +1,13 @@
+{
+    "workbench.colorTheme": "GitHub Light Default",
+    "files.associations": {
+        "*.scm": "racket"
+    },
+    "magicRacket.languageServer.command": "xvfb-run",
+    "magicRacket.languageServer.arguments": [
+        "--auto-servernum",
+        "racket",
+        "--lib",
+        "racket-langserver"
+    ]
+}
