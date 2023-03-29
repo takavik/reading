@@ -76,3 +76,28 @@ int any(char s1[], char s2[]) {
     return -1;
 }
 ```
+
+Exercise 2-6. Write a function ``setbits(x,p,n,y)`` that returns ``x`` with the ``n`` bits that begin at position ``p`` set to the rightmost ``n`` bits of ``y``, leaving the other bits unchanged. &#9633;
+```c
+unsigned long setbits(unsigned long x, int p, int n, unsigned long y) {
+    unsigned long a, b;
+    a = x>>(p+n)<<n;
+    b = y & ~(~0 << n);
+    b |= a;
+    b <<= p;
+    a = x & ~(~0 << p);
+    return a | b;
+}
+```
+
+Exercise 2-7. Write a function ``invert(x,p,n)`` that returns ``x`` with the ``n`` bits that begin at position ``p`` inverted (i.e., 1 changed into 0 and vice versa), leaving the others unchanged. &#9633;
+```c
+unsigned long invert(unsigned long x, int p, int n) {
+    unsigned long a, b, c;
+    a = (~(~0 << n)) << p;       
+    a =  ~(x & a) & (~(~0<<n)) << p;
+    b = x & ~(~0 << p);          
+    c = x & (~0 << (p+n));       
+    return a | b | c;
+}
+```
