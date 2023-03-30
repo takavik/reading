@@ -101,3 +101,18 @@ unsigned long invert(unsigned long x, int p, int n) {
     return a | b | c;
 }
 ```
+
+Exercise 2-8. Write a function ``rightrot(x,n)`` that returns the value of the integer ``x`` rotated to the right by ``n`` bit positions. &#9633;
+```c
+unsigned long rightrot(unsigned long x, size_t n) {
+    unsigned long a, b, c;
+    size_t size = 8*sizeof(x);
+
+    a = x >> n;
+    b = ~(~0 << (size - n)) & a;
+    a = ~(~0 << n) & x;
+    a <<= (size - n); 
+
+    return a | b;
+}
+```
