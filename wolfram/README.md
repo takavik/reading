@@ -1,0 +1,1 @@
+To save the notebook as readable format, run ``ResourceFunction["SaveReadableNotebook"][FindFile["original-notebook.nb"],FileNameJoin[{$RootDirectory, "home", ...}]]``.
