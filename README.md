@@ -16,5 +16,5 @@ sudo apt install -y racket wolframscript wolfram-engine emacs code firefox-esr
 
 * Remove unwanted
 ```sh
-sudo apt purge --autoremove -y 'libreoffice*' code-the-classics claws-mail chromium greenfoot-unbundled mu-editor thonny geany sense-emu-tools smartsim nano chromium-browser dillo
+sudo apt purge --autoremove -y 'libreoffice*' code-the-classics claws-mail chromium greenfoot-unbundled mu-editor thonny geany sense-emu-tools smartsim nano chromium-browser dillo vlc
 ```
